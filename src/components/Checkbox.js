@@ -1,16 +1,27 @@
-import React from "react";
+import React, { Component } from "react";
+import {connect} from "react-redux";
 
-const  Checkbox = ( {price} )=>{
+class Checkbox extends Component{
 
+    render(){
+       
+    const x=this.props.seleted_value===this.props.price ? true : false;
     return (
         <div className="ui form">
                          <div className="field">
                          <div className="ui radio checkbox">
-                         <input type="radio" name="example2" checked="checked" />
-                         <label className="meta">${price}</label>
+                         <input type="radio" checked={x}
+                         onChange={()=>{}}
+                         />
+                         <label className="meta">${this.props.price}</label>
                           </div>
-                          </div>
+                          </div> 
         </div>
-    )
+    )}
 }
-export default Checkbox;
+
+const mapStateToProps = state => {
+    return {seleted_value : state.Seleted_redio}
+}
+
+export default connect(mapStateToProps)(Checkbox);

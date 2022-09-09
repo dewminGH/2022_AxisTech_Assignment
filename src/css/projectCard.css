@@ -10,6 +10,12 @@
     border-radius: 10px !important;
 }
 
+.paymentDone-button{
+    background: #AF93FF !important;
+    border-radius: 10px !important;
+    width: 100%!important;
+}
+
 .projectCard{
     margin-left: 5%;
     margin-right:5%;
@@ -25,4 +31,11 @@
 .top-bot-margin{
     margin-top: 5% !important;
     margin-bottom: 8% !important;
+}
+
+.donate-msg{
+    background: linear-gradient(144.41deg, #818BE9 47.54%, #E47FDA 91.07%), #7BD2AD !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
 }
