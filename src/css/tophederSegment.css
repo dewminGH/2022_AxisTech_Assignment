@@ -16,3 +16,13 @@
 .header,.topsegment{
     color: #ffff !important;
 }
+
+.topsegment-leftCol{
+    text-align: start !important;
+}
+
+.topsegment-logo{
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
