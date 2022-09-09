@@ -15,16 +15,14 @@ class ProjectList extends Component{
     RenderedProjects=()=>{
          const RenderProjects=Object.values(this.props.Fetch_Projects)
          return RenderProjects.map( project => {
-         return (<Project project={project} x='sasas'/>)
+         return (<Project project={project} key={project.id}/>)
         })
     }
 
     render(){
         return(
-        <div>
- xxxxxff
-
- {this.RenderedProjects()}
+        <div className="ui three column grid">
+        {this.RenderedProjects()}
         </div>)
     }
 }
