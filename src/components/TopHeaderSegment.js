@@ -21,7 +21,7 @@ class TopHeaderSegment extends Component {
                     </div>
 
                     <div className="column topsegment-leftCol">
-                    <h1   className="ui header left floted topsegment"> {title} </h1>
+                    <h1   className="ui header left floted topsegment-header"> {title} </h1>
                     <div className="description"> {description} </div>
                     <button className="ui basic button topSegment-button "> {buttonName} </button>
                     </div>
