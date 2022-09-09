@@ -8,11 +8,11 @@ import App from './components/app';
 import Reducers from './reducers/index';
 
 //I only add this to spec my redux store //
-const composeEnhansment = window.__REDUX_DEVTOOLS_EXTENTION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 ReactDom.render(
     <Provider 
-    store={createStore(composeEnhansment(Reducers ,applyMiddleware(thunk)))}>
+    store={createStore(Reducers ,composeEnhancers(applyMiddleware(thunk)))}>
     <App/>
     </Provider>,
     document.querySelector('#root')

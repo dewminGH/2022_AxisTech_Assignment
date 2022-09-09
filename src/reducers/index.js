@@ -1,5 +1,7 @@
 import { combineReducers } from "redux";
 
+import fetchProjectsReducer from "./fetchProjectsReducer";
+
 export default combineReducers({
-    repalce_me : ()=> {return 'x'}
+    Fetch_Projects : fetchProjectsReducer
 })
