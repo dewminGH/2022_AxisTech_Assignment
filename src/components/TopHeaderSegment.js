@@ -8,6 +8,7 @@ class TopHeaderSegment extends Component {
 
     render(){
         const  { title , description , buttonName , src } = this.props;
+
     return (
 
     <div className="ui segment topsegment">
@@ -23,7 +24,8 @@ class TopHeaderSegment extends Component {
                     <div className="column topsegment-leftCol">
                     <h1   className="ui header left floted topsegment-header"> {title} </h1>
                     <div className="description"> {description} </div>
-                    <button className="ui basic button topSegment-button "> {buttonName} </button>
+                    <button className="ui basic button topSegment-button "
+                     > {buttonName} </button>
                     </div>
 
          </div>     
@@ -32,5 +34,6 @@ class TopHeaderSegment extends Component {
     )
     }
 }
+
 
 export default TopHeaderSegment;

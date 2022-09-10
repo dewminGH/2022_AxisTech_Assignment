@@ -12,13 +12,16 @@ import {
     TopSegment_logo_path
  } from "../DescrptionsAndTitles/descriptions";
 
+ import '../css/app.css';
 
 class App extends Component {
 
     render(){
-        const BG_color= this.props.Current_theme==='bright' ? 'white' : 'black';
+        //color change due to theme change
+        const Theme= this.props.Current_theme==='bright' ? 
+        {BG_color:'white' , Header_color : 'black'} : {BG_color:'black' , Header_color : 'white'};
         return(
-            <div style={{backgroundColor: BG_color}}>
+            <div style={{backgroundColor: Theme.BG_color}}>
             <div className="ui container" >
 
                 <BackGroundMode/>
@@ -28,6 +31,7 @@ class App extends Component {
                 description={TopSegment_description}
                 src={TopSegment_logo_path}
                 />
+                <h1 className="ui heder app-header" style={{color:Theme.Header_color}}> Projects</h1>
                 <ProjectList/>
 
             </div></div>

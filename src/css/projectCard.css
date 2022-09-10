@@ -27,7 +27,7 @@
 }
 
 .card-frame{
-    height: 360px !important;
+    height: 380px !important;
 }
 
 .top-margins{
@@ -44,4 +44,9 @@
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
+}
+
+.re-box{
+    box-shadow: none !important;
+    border: none !important;
 }

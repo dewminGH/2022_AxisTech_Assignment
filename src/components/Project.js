@@ -21,7 +21,7 @@ import {
 
 
 const Project = ( 
-    { project , donateAmounts , prices , selectedRediobox , donateMoney , selected_donate_amount }
+    { project , donateAmounts , prices , selectedRediobox , donateMoney , selected_donate_amount , Current_theme }
      ) =>{
     //this state pice only use this compoenent to find current
     //Design on card
@@ -52,16 +52,18 @@ const Project = (
 
     //Donate JSX View 1
     const DonateNow = () =>{
+         //color change due to theme change
+        const Text_color= Current_theme==='bright' ? 'black' : '#B2B4BA';
         return(
             <>
             <div className="image projectCard">
                      <img src={urls.regular}  alt="sad broken </3"/>
             </div>
-            <div className="content">
-            <div className="header">{title}</div>
+            <div className="content" style={{color:Text_color}}>
+            <div className="header"  style={{color:Text_color}}>{title}</div>
 
                 <i className="dollar sign icon"></i>{target_amount}
-                <div className="meta" style={{display:'inline'}}> Rasised</div>
+                <div className="meta" style={{display:'inline' , color:Text_color}}> Rasised</div>
 
             <button className="ui violet button donate-button top-margins"
             onClick={ () =>DonateOnClick()}>Donate Now</button>
@@ -74,6 +76,8 @@ const Project = (
     //payment JSX view 2
     const PayNow = ()=>{ 
     //for initial render setup
+    const Text_color= Current_theme==='bright' ? 'black' : '#B2B4BA';
+    //color change due to theme change
     if(!prices){
         return null;
     }
@@ -83,10 +87,13 @@ const Project = (
         </div>)
        })
            return (     
-            <div className="content">
+            <div className="content" style={{color:Text_color}}>
             <i className="times circle outline icon" 
             onClick={()=> SetCardname('donatenow')}></i>       
-             <div className="header top-bot-margin">{PayNow_cardName}</div>
+             <div className="header top-bot-margin" 
+             style={{color:Text_color}}>
+                {PayNow_cardName}
+             </div>
                         {RenderAmounts}
              <button className="ui violet button payment-button top-margins"
              onClick={()=> PayNowOnClick()}>Pay Now</button>
@@ -97,13 +104,12 @@ const Project = (
 
     //Payment done JSX view 3
     const DonateSuccessfull = ()=>{
-
         return(
             <>
              <div className="image projectCard">
                      <img src={Donated_img_path}  alt="sad broken </3"/>
             </div>
-            <div className="content">
+            <div className="content" >
                 <div className="header donate-msg top-bot-margin">
                      {Donate_Successful_msg}
                 </div>
@@ -117,18 +123,23 @@ const Project = (
 
     //Crad View Select
     const CardView = () =>{
-        if(CardName==='paynow') // view 1
+        if(CardName==='paynow') // view 2
         return PayNow()
-        if(CardName==='donatenow') // view 2
+        if(CardName==='donatenow') // view 1
         return DonateNow()
         if(CardName==='done')
         return DonateSuccessfull() // view 3
     }
 
 
+    //Project componenet rendering JSX
+    //color change to due theme change
+    const Card_BG= Current_theme==='bright' ? 
+    {color:'white' , boxBorder:''} :  {color:'#2A2D39' , boxBorder:'re-box'};
     return   (
-        <div className="column" >
-        <div className="ui fluid card card-frame">
+        <div className="column"  >
+        <div className={`ui fluid card card-frame ${Card_BG.boxBorder}`} 
+        style={{backgroundColor:Card_BG.color }}>
          {CardView()}
         </div>
       </div>)
@@ -138,7 +149,9 @@ const Project = (
 const mapStateToProps = state =>{
     return{ 
         prices : state.Fetch_DonateAmoutes.data ,
-        selected_donate_amount : state.Seleted_redio}
+        selected_donate_amount : state.Seleted_redio,
+        Current_theme : state.Theme
+    }
 }
 
 export default connect ( mapStateToProps , {donateAmounts,selectedRediobox,donateMoney} ) (Project);
