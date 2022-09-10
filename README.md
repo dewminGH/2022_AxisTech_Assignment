@@ -1,3 +1,37 @@
+# Used Libraries
+semantic-ui (https://semantic-ui.com/)
+Redux
+Redux-thunk
+axios (api handle)
+Lodash JS(for only few js function)
+
+# Deploy site Netlify
+https://boisterous-yeot-e4e739.netlify.app/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
