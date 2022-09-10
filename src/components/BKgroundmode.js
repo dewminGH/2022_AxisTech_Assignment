@@ -13,6 +13,7 @@ class BackGroundMode extends Component{
         return(
             <div className="ui right aligned  segment segment-chkbox" 
             style={{backgroundColor: BG.BGcolor}}>
+              <h1 className="ui header title-header">{this.props.title}</h1>
               <i className={`${BG.icon.type} icon large`}
               style={{color: BG.icon.color}}></i>
               <div className="ui toggle checkbox" onClick={()=> this.props.ColorMode(mode)}>

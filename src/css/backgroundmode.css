@@ -8,3 +8,14 @@
     box-shadow: none !important;
     border: none !important;
 }
+
+.title-header{
+    margin-right: 60% !important;
+    position: absolute !important;
+    font-weight: bold !important;
+    background: linear-gradient(177.68deg, #818BE9 1.95%, #AF93FF 98.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+}

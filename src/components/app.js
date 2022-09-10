@@ -24,7 +24,7 @@ class App extends Component {
             <div style={{backgroundColor: Theme.BG_color}}>
             <div className="ui container" >
 
-                <BackGroundMode/>
+                <BackGroundMode title='Togther We'/>
                 <TopHeaderSegment 
                 title={TopSegment_title}
                 buttonName={TopSegment_buttonName}
