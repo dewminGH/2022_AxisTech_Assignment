@@ -2,7 +2,8 @@ import {
     Fetch_Fundraising,
     Fetch_donteAmounts,
     Selected_redio_box,
-    Donate_money
+    Donate_money,
+    Themes
  } from "../types/types";
 
 import TogetherWebAPI from "../api/TogetherWebAPI";
@@ -30,4 +31,8 @@ export const donateMoney = (id , amount)=> async dispatch =>{
 //local to get seleted value--
 export const selectedRediobox = (value) =>{
     return {type : Selected_redio_box , payload : value }
+}
+
+export const ColorMode = (value) =>{
+    return {type : Themes , payload :value}
 }

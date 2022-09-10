@@ -124,9 +124,11 @@ const Project = (
         if(CardName==='done')
         return DonateSuccessfull() // view 3
     }
+
+
     return   (
         <div className="column" >
-        <div className="ui fluid card">
+        <div className="ui fluid card card-frame">
          {CardView()}
         </div>
       </div>)

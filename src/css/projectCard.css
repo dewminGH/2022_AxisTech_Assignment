@@ -2,6 +2,7 @@
     background-color: #818BE9 !important;
     width: 100%;
     border-radius: 10px !important;
+    bottom: 5%;
 }
 
 .payment-button{
@@ -21,7 +22,12 @@
     margin-right:5%;
     margin-top: 5%;
     box-shadow: 0px 2px 48px rgba(23, 23, 23, 0.1);
-    border-radius: 10px;
+    border-radius: 10px !important;
+
+}
+
+.card-frame{
+    height: 360px !important;
 }
 
 .top-margins{
