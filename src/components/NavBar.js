@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 
 import { ColorMode } from "../actions";
 import '../css/backgroundmode.css';
-class BackGroundMode extends Component{
+class NavBar extends Component{
 
     render(){
         const mode= this.props.Current_theme==='bright' ? 'dark' : 'bright';
@@ -16,8 +16,8 @@ class BackGroundMode extends Component{
               <h1 className="ui header title-header">{this.props.title}</h1>
               <i className={`${BG.icon.type} icon large`}
               style={{color: BG.icon.color}}></i>
-              <div className="ui toggle checkbox" onClick={()=> this.props.ColorMode(mode)}>
-               <input type="checkbox" name="public" />
+              <div className="ui toggle checkbox" >
+               <input type="checkbox" name="public" onClick={()=> this.props.ColorMode(mode)}/>
                  <label></label>
                </div>
             </div>
@@ -29,4 +29,4 @@ const mapStateToProps = state =>{
     return {Current_theme : state.Theme}
 }
 
-export default connect(mapStateToProps , {ColorMode} )(BackGroundMode);
+export default connect(mapStateToProps , {ColorMode} )(NavBar);

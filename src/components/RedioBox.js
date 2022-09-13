@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {connect} from "react-redux";
 
-class Checkbox extends Component{
+class Rediobox extends Component{
 
     render(){
        
@@ -25,4 +25,4 @@ const mapStateToProps = state => {
     return {seleted_value : state.Seleted_redio , Current_theme : state.Theme}
 }
 
-export default connect(mapStateToProps)(Checkbox);
+export default connect(mapStateToProps)(Rediobox);

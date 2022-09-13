@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 
-import Checkbox from "./Checkbox";
+import RedioBox from "./RedioBox";
 
 import {  
     donateAmounts , 
@@ -83,7 +83,7 @@ const Project = (
     }
      const RenderAmounts = prices.data.map( price => {
       return (<div onClick={()=>selectedRediobox(price)} key={price}>
-        <Checkbox price={price} />
+        <RedioBox price={price} />
         </div>)
        })
            return (     

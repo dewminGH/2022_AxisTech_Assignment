@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 
 import TopHeaderSegment from "./TopHeaderSegment";
 import ProjectList from "./ProjectList";
-import BackGroundMode from "./BKgroundmode";
+import NavBar from "./NavBar";
 //to get descptions&title names 
 import { 
     TopSegment_description,
@@ -20,18 +20,22 @@ class App extends Component {
         //color change due to theme change
         const Theme= this.props.Current_theme==='bright' ? 
         {BG_color:'white' , Header_color : 'black'} : {BG_color:'black' , Header_color : 'white'};
+
         return(
             <div style={{backgroundColor: Theme.BG_color}}>
             <div className="ui container" >
 
-                <BackGroundMode title='Togther We'/>
+                <NavBar title='Togther We'/>
+                
                 <TopHeaderSegment 
                 title={TopSegment_title}
                 buttonName={TopSegment_buttonName}
                 description={TopSegment_description}
                 src={TopSegment_logo_path}
                 />
+                
                 <h1 className="ui heder app-header" style={{color:Theme.Header_color}}> Projects</h1>
+
                 <ProjectList/>
 
             </div></div>
