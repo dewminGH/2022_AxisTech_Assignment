@@ -50,3 +50,18 @@
     box-shadow: none !important;
     border: none !important;
 }
+
+@media only screen and (max-width: 600px){
+    .mobile-card{
+     height: 270px !important; 
+    }
+    .mobile-button{
+        font-size: 1.5ch !important;
+    }
+    .mobile-view2-title{
+        font-size: 1.4ch !important;
+    }
+    .mobile-view3-title{
+        font-size: 2ch !important;
+    }
+}

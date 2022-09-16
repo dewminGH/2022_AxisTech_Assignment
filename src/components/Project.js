@@ -65,7 +65,7 @@ const Project = (
                 <i className="dollar sign icon"></i>{target_amount}
                 <div className="meta" style={{display:'inline' , color:Text_color}}> Rasised</div>
 
-            <button className="ui violet button donate-button top-margins"
+            <button className="ui violet button donate-button top-margins mobile-button"
             onClick={ () =>DonateOnClick()}>Donate Now</button>
             </div>
             </>
@@ -90,12 +90,12 @@ const Project = (
             <div className="content" style={{color:Text_color}}>
             <i className="times circle outline icon" 
             onClick={()=> SetCardname('donatenow')}></i>       
-             <div className="header top-bot-margin" 
+             <div className="header top-bot-margin mobile-view2-title" 
              style={{color:Text_color}}>
                 {PayNow_cardName}
              </div>
                         {RenderAmounts}
-             <button className="ui violet button payment-button top-margins"
+             <button className="ui violet button payment-button top-margins mobile-button"
              onClick={()=> PayNowOnClick()}>Pay Now</button>
              </div>
            )
@@ -110,10 +110,10 @@ const Project = (
                      <img src={Donated_img_path}  alt="sad broken </3"/>
             </div>
             <div className="content" >
-                <div className="header donate-msg top-bot-margin">
+                <div className="header donate-msg top-bot-margin mobile-view3-title">
                      {Donate_Successful_msg}
                 </div>
-                <button className="ui violet button paymentDone-button top-margins"
+                <button className="ui violet button paymentDone-button top-margins mobile-button"
                 onClick={()=>DonateSuccessfullOnClick()}
                  >Done</button>
             </div>
@@ -138,7 +138,7 @@ const Project = (
     {color:'white' , boxBorder:''} :  {color:'#2A2D39' , boxBorder:'re-box'};
     return   (
         <div className="column"  >
-        <div className={`ui fluid card card-frame ${Card_BG.boxBorder}`} 
+        <div className={`ui fluid card card-frame ${Card_BG.boxBorder} mobile-card`} 
         style={{backgroundColor:Card_BG.color }}>
          {CardView()}
         </div>
